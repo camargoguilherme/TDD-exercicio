@@ -20,5 +20,14 @@ describe('CalculadoraDeSalario', () => {
 		expect(calculadoraDeSalario.calculaSalario(funcionario)).toBe("campos 'nome', 'email', 'salarioBase' e 'cargo' precisam ser validos");
 	});
 
+	test('valida salario de desenvolvedor >= 3000.00', () =>{
+		let funcionario = {
+			nome: 'Lucas Fuzeto',
+			email: 'lucas.fuzeto@email.com',
+			salarioBase: 3500.00,
+			cargo: cargos.DESENVOLVEDOR
+		}
+		expect(calculadoraDeSalario.calculaSalario(funcionario)).toBe(2800.00);
+	});
 	
 });
