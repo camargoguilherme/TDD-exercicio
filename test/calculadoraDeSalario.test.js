@@ -51,4 +51,14 @@ describe("CalculadoraDeSalario", () => {
     };
     expect(calculadoraDeSalario.calculaSalario(funcionario)).toBe(2294.25);
   });
+
+  test("valida salario de dba < 2000.00", () => {
+    let funcionario = {
+      nome: "Thiago Assis",
+      email: "thiago.assis@email.com",
+      salarioBase: 1850.0,
+      cargo: cargos.DBA,
+    };
+    expect(calculadoraDeSalario.calculaSalario(funcionario)).toBe(1572.5);
+  });
 });
