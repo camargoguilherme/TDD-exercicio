@@ -41,4 +41,14 @@ describe("CalculadoraDeSalario", () => {
     };
     expect(calculadoraDeSalario.calculaSalario(funcionario)).toBe(2520.0);
   });
+
+  test("valida salario de dba >= 2000.00", () => {
+    let funcionario = {
+      nome: "Bruno Balzanelo",
+      email: "bruno.balzanelo@email.com",
+      salarioBase: 3059.0,
+      cargo: cargos.DBA,
+    };
+    expect(calculadoraDeSalario.calculaSalario(funcionario)).toBe(2294.25);
+  });
 });
