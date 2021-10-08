@@ -61,4 +61,14 @@ describe("CalculadoraDeSalario", () => {
     };
     expect(calculadoraDeSalario.calculaSalario(funcionario)).toBe(1572.5);
   });
+
+  test("valida salario de testador >= 2000.00", () => {
+    let funcionario = {
+      nome: "Igor Rhuan",
+      email: "igor.rhuan@email.com",
+      salarioBase: 4520.0,
+      cargo: cargos.TESTADOR,
+    };
+    expect(calculadoraDeSalario.calculaSalario(funcionario)).toBe(3390);
+  });
 });
